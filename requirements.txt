@@ -3,3 +3,4 @@ scikit-learn
 pandas
 numpy
 nltk
+joblibpip freeze > requirements.txt
