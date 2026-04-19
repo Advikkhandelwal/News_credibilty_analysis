@@ -1,0 +1,18 @@
+fastapi
+uvicorn
+pydantic
+scikit-learn
+pandas
+numpy
+nltk
+spacy
+langchain
+langchain-groq
+langchain-core
+python-dotenv
+python-multipart
+beautifulsoup4
+requests
+reportlab
+joblib
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
