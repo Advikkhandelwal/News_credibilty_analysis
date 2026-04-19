@@ -5,6 +5,8 @@ import axios from 'axios';
 import { FileText, Link as LinkIcon, UploadCloud, Loader2, Search } from 'lucide-react';
 import { useDropzone } from 'react-dropzone';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://news-credibilty-analysis.onrender.com';
+
 export default function Analyze() {
   const [activeTab, setActiveTab] = useState('text');
   const [text, setText] = useState('');
@@ -21,15 +23,15 @@ export default function Analyze() {
       let response;
       if (activeTab === 'text') {
         if (!text.trim()) throw new Error('Please enter some text to analyze.');
-        response = await axios.post('http://127.0.0.1:8000/analyze-text', { text });
+        response = await axios.post(`${API_BASE_URL}/analyze-text`, { text });
       } else if (activeTab === 'url') {
         if (!url.trim()) throw new Error('Please enter a valid URL.');
-        response = await axios.post('http://127.0.0.1:8000/analyze-url', { url });
+        response = await axios.post(`${API_BASE_URL}/analyze-url`, { url });
       } else {
         if (!file) throw new Error('Please upload a .txt file.');
         const formData = new FormData();
         formData.append('file', file);
-        response = await axios.post('http://127.0.0.1:8000/upload-file', formData);
+        response = await axios.post(`${API_BASE_URL}/upload-file`, formData);
       }
       
       navigate('/results', { state: { result: response.data } });

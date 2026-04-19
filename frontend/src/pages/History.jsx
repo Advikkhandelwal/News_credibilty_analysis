@@ -4,6 +4,8 @@ import axios from 'axios';
 import { History as HistoryIcon, Loader2, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://news-credibilty-analysis.onrender.com';
+
 export default function History() {
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -12,7 +14,7 @@ export default function History() {
   useEffect(() => {
     const fetchHistory = async () => {
       try {
-        const res = await axios.get('http://127.0.0.1:8000/history');
+        const res = await axios.get(`${API_BASE_URL}/history`);
         setHistory(res.data);
       } catch (err) {
         setError('Failed to fetch analysis history. Please check your connection.');
