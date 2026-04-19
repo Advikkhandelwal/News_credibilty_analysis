@@ -52,7 +52,7 @@
     Navigate to the source directory and launch the web app:
  
     ```bash
-    streamlit run src/app.py
+    streamlit run app.py
     ```
  
  ## Model Performance Metrics
