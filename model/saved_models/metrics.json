@@ -1,0 +1,53 @@
+{
+    "best_model": "Logistic Regression",
+    "all_metrics": {
+        "Logistic Regression": {
+            "Accuracy": 0.9287338893100834,
+            "Precision": 0.9289002027621739,
+            "Recall": 0.9287338893100834,
+            "F1 Score": 0.928712270439401,
+            "Confusion Matrix": [
+                [
+                    1781,
+                    162
+                ],
+                [
+                    120,
+                    1894
+                ]
+            ]
+        },
+        "Decision Tree": {
+            "Accuracy": 0.8824867323730099,
+            "Precision": 0.8824844137354468,
+            "Recall": 0.8824867323730099,
+            "F1 Score": 0.8824850656643636,
+            "Confusion Matrix": [
+                [
+                    1709,
+                    234
+                ],
+                [
+                    231,
+                    1783
+                ]
+            ]
+        },
+        "Random Forest": {
+            "Accuracy": 0.9231741218094516,
+            "Precision": 0.9236278648691493,
+            "Recall": 0.9231741218094516,
+            "F1 Score": 0.9231276878867284,
+            "Confusion Matrix": [
+                [
+                    1757,
+                    186
+                ],
+                [
+                    118,
+                    1896
+                ]
+            ]
+        }
+    }
+}
